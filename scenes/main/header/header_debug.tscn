@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqbioiaivwf0d"]
+
+[ext_resource type="PackedScene" uid="uid://cxpspe288cu2p" path="res://scenes/main/header/header.tscn" id="1_q1yrr"]
+
+[node name="header_debug" type="Node2D"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1280.0
+offset_bottom = 55.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Header" parent="MarginContainer" instance=ExtResource("1_q1yrr")]
+layout_mode = 2

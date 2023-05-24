@@ -1,0 +1,136 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxpspe288cu2p"]
+
+[ext_resource type="Texture2D" uid="uid://c2g3k74ayw5pp" path="res://assets/images/bad_apple.png" id="1_6km40"]
+[ext_resource type="StyleBox" uid="uid://bar8uhntlic68" path="res://assets/styles/search_style.tres" id="2_x8y7y"]
+
+[node name="Header" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0862745, 0.105882, 0.133333, 1)
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 1101.0
+offset_bottom = 20.0
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+alignment = 1
+
+[node name="Spacing" type="MarginContainer" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.16
+theme_override_constants/margin_left = 40
+
+[node name="Logo" type="TextureRect" parent="HBoxContainer3"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.4
+texture = ExtResource("1_6km40")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Spacing4" type="MarginContainer" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.16
+theme_override_constants/margin_left = 20
+
+[node name="Edit" type="MarginContainer" parent="HBoxContainer3"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer3/Edit"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(0.0509804, 0.0666667, 0.0901961, 1)
+theme_override_colors/font_selected_color = Color(0.760784, 0.764706, 0.74902, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = ExtResource("2_x8y7y")
+placeholder_text = "   Search or jump to..."
+selecting_enabled = false
+
+[node name="Spacing2" type="MarginContainer" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.68
+theme_override_constants/margin_left = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_stretch_ratio = 3.44
+theme_override_constants/separation = 40
+
+[node name="PR" type="PanelContainer" parent="HBoxContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Label" type="Label" parent="HBoxContainer3/HBoxContainer/PR"]
+layout_mode = 2
+text = "Pull requests"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Issues" type="PanelContainer" parent="HBoxContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_stretch_ratio = 0.7
+
+[node name="Label" type="Label" parent="HBoxContainer3/HBoxContainer/Issues"]
+layout_mode = 2
+text = "Issues"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Codespaces" type="PanelContainer" parent="HBoxContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_stretch_ratio = 1.25
+
+[node name="Label" type="Label" parent="HBoxContainer3/HBoxContainer/Codespaces"]
+layout_mode = 2
+text = "Codespaces"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Marketplace" type="PanelContainer" parent="HBoxContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_stretch_ratio = 0.8
+
+[node name="Label" type="Label" parent="HBoxContainer3/HBoxContainer/Marketplace"]
+layout_mode = 2
+text = "Marketplace"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Explore" type="PanelContainer" parent="HBoxContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Label" type="Label" parent="HBoxContainer3/HBoxContainer/Explore"]
+layout_mode = 2
+text = "Explore"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacing3" type="MarginContainer" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_stretch_ratio = 3.38
+theme_override_constants/margin_left = 80
